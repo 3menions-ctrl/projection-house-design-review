@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projection House — Help mock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"><span></span><span></span></div>
+    <aside data-rail data-active="help"></aside>
+    <main class="page">
+      <div class="page-inner">
+        <header class="topline"><div class="breadcrumb"><a href="index.html">Expansion review</a><span>·</span><span>Help / Support house</span></div><div class="live-chip"><i></i> Human support online</div></header>
+
+        <section class="help-hero">
+          <div><p class="eyebrow">Help house · Answers and accountability</p><h1>What are you trying to make?</h1><p>Search production guidance, understand the render system, or start a support thread that reaches the right team with the right context.</p><label class="help-search"><input data-help-search placeholder="Search Studio, Editor, billing, rendering…" aria-label="Search help" /><span data-help-count>Search all guides</span></label></div>
+        </section>
+
+        <section class="status-bar" aria-label="System status">
+          <div class="status-ok"><i></i> All systems operational</div>
+          <div class="status-metric"><b>Generation</b><span>Healthy · 99.98%</span></div>
+          <div class="status-metric"><b>Stitching</b><span>Healthy · 42s avg</span></div>
+          <div class="status-metric"><b>Uploads</b><span>Healthy · 118ms</span></div>
+          <div class="status-metric"><b>Support</b><span>6m first reply</span></div>
+        </section>
+
+        <div class="help-layout">
+          <section>
+            <div class="section-head"><div><p class="eyebrow">Start here</p><h2>Guidance by intent.</h2></div><p>Every card opens a short path first, then offers the technical details if you need them.</p></div>
+            <div class="quick-grid">
+              <button class="help-card" data-help-card="start first film studio prompt beginner" data-toast="Getting started guide opened"><span class="symbol">✦</span><h3>Make your first film</h3><p>From a one-line idea to a finished sequence with cast, world, sound and a safe credit contract.</p></button>
+              <button class="help-card" data-help-card="editor timeline trim captions effects export" data-toast="Editor guide opened"><span class="symbol">⌁</span><h3>Shape it in Editor</h3><p>Timeline gestures, precision trims, captions, audio, VFX, versioning and final delivery.</p></button>
+              <button class="help-card" data-help-card="render pipeline stuck failed clips retry credits" data-toast="Render recovery guide opened"><span class="symbol">◌</span><h3>Understand a render</h3><p>See what each production stage does, why a shot can wait, and how recovery protects your credits.</p></button>
+              <button class="help-card" data-help-card="billing credits holds refund invoice payment" data-toast="Billing guide opened"><span class="symbol">₡</span><h3>Credits without surprises</h3><p>Spendable balance, production holds, charges on success, refunds, invoices and auto-recharge.</p></button>
+              <button class="help-card" data-help-card="avatars cast voice character continuity identity" data-toast="Casting guide opened"><span class="symbol">◎</span><h3>Cast a consistent character</h3><p>Choose identities, attach voices, stage supporting roles and preserve continuity between shots.</p></button>
+              <button class="help-card" data-help-card="vfx effects blender cinematic compositing finish" data-toast="Effects guide opened"><span class="symbol">※</span><h3>Build a cinematic effect</h3><p>Use physically motivated VFX, compositing layers, keyframes and a reversible finishing pass.</p></button>
+            </div>
+          </section>
+
+          <aside class="support-panel">
+            <p class="eyebrow">Direct line</p><h2>Start a support thread.</h2><p>The form attaches route, browser and production context only after you review it. No raw errors or secrets are sent.</p>
+            <div class="support-types"><button class="active" data-support-type>Question</button><button data-support-type>Bug</button><button data-support-type>Feature</button><button data-support-type>Talk to us</button></div>
+            <div class="fields" style="grid-template-columns:1fr">
+              <div class="field"><label>Subject</label><input data-support-subject placeholder="Question subject" /></div>
+              <div class="field"><label>What happened?</label><textarea placeholder="Tell us where you were, what you expected, and what you saw…"></textarea></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px"><button class="btn" data-toast="Screenshot picker opened">＋ Screenshot</button><button class="btn primary" data-toast="Review step opened before submission">Review & send</button></div>
+            <div class="config-label">Your open threads</div>
+            <div class="ticket"><i></i><div><strong>Shot 04 waiting after retry</strong><span>In progress · Production support</span></div><span class="mono faint" style="font-size:7px">12m</span></div>
+            <div class="ticket"><i style="background:var(--green)"></i><div><strong>Invoice address corrected</strong><span>Resolved · Billing</span></div><span class="mono faint" style="font-size:7px">2d</span></div>
+          </aside>
+        </div>
+
+        <section>
+          <div class="section-head"><div><p class="eyebrow">Documentation</p><h2>Deeper in the weeds.</h2></div><p>Reference material remains available when a short answer is not enough.</p></div>
+          <div class="docs-row">
+            <button class="doc" data-help-card="editor manual shortcuts panels timeline"><b>Editor manual →</b><span>Every shortcut, panel and timeline gesture.</span></button>
+            <button class="doc" data-help-card="render pipeline shots queue stitch watchdog"><b>Render pipeline →</b><span>How shots are queued, chained, stitched and recovered.</span></button>
+            <button class="doc" data-help-card="marketplace policies creator templates"><b>Marketplace policies →</b><span>Availability, ownership and publishing boundaries.</span></button>
+            <button class="doc" data-help-card="api developer keys webhook reference"><b>API reference →</b><span>Endpoints, authentication, limits and delivery events.</span></button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="mock.js"></script>
+  </body>
+</html>

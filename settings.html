@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projection House — Settings mock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"><span></span><span></span></div>
+    <aside data-rail data-active="settings"></aside>
+    <main class="page">
+      <div class="page-inner">
+        <header class="topline">
+          <div class="breadcrumb"><a href="index.html">Expansion review</a><span>·</span><span>Settings / Control room</span></div>
+          <div class="live-chip"><i></i> 12 capability domains</div>
+        </header>
+        <div class="settings-layout">
+          <aside class="settings-nav" aria-label="Settings sections">
+            <div class="settings-id"><img src="cinema-assets/avatars/aaliyah-johnson-front.webp" alt="" /><div><strong>Aaliyah James</strong><span>PRO CREATOR · 4,280 CR</span></div></div>
+            <nav class="settings-list">
+              <button class="settings-link active" data-settings-link="identity"><span>◎</span><span>Identity</span></button>
+              <button class="settings-link" data-settings-link="appearance"><span>◐</span><span>Appearance</span></button>
+              <button class="settings-link" data-settings-link="notifications"><span>◌</span><span>Notifications</span></button>
+              <button class="settings-link" data-settings-link="privacy"><span>◇</span><span>Privacy</span></button>
+              <button class="settings-link" data-settings-link="creator"><span>♢</span><span>Creator</span></button>
+              <button class="settings-link" data-settings-link="playback"><span>▷</span><span>Playback</span></button>
+              <button class="settings-link" data-settings-link="effects"><span>✦</span><span>Effects & VFX</span></button>
+              <button class="settings-link" data-settings-link="studio"><span>⌁</span><span>Studio profile</span></button>
+              <button class="settings-link" data-settings-link="billing"><span>₡</span><span>Billing</span></button>
+              <button class="settings-link" data-settings-link="security"><span>⌾</span><span>Security</span></button>
+              <button class="settings-link" data-settings-link="developers"><span>&lt;/&gt;</span><span>Developers</span></button>
+              <button class="settings-link" data-settings-link="data"><span>□</span><span>Data & account</span></button>
+            </nav>
+          </aside>
+
+          <section class="settings-main">
+            <header class="settings-head">
+              <div><p class="eyebrow" data-settings-kicker>Who you are</p><h1 data-settings-title>Identity</h1><p class="lead" data-settings-lead>Name, handle, photos and the public story attached to your work.</p></div>
+              <div class="completion" title="Profile completion"><strong>78%</strong></div>
+            </header>
+
+            <div class="setting-section active" data-settings-section="identity">
+              <div class="setting-group">
+                <h3>Public portrait</h3><p>The same identity appears on films, collaboration rooms, credits and your creator profile.</p>
+                <div style="display:grid;grid-template-columns:100px 1fr;gap:18px;align-items:center"><div class="portrait-ring" style="width:92px;height:92px;border-radius:27px"><img style="border-radius:24px" src="cinema-assets/avatars/aaliyah-johnson-front.webp" alt="" /></div><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="btn blue-btn" data-toast="Photo picker opened">Replace portrait</button><button class="btn" data-toast="Cover picker opened">Change cover</button><button class="btn ghost" data-toast="Preview profile opened">Preview profile ↗</button></div></div>
+              </div>
+              <div class="setting-group">
+                <h3>Names and story</h3><p>Changes save as one atomic profile update and are reflected anywhere your work is credited.</p>
+                <div class="fields">
+                  <div class="field"><label>Display name</label><input value="Aaliyah James" /></div>
+                  <div class="field"><label>Handle</label><input value="aaliyahjames" /></div>
+                  <div class="field"><label>Tagline</label><input value="Quiet characters in impossible worlds." /></div>
+                  <div class="field"><label>Location</label><input value="Chicago, US" /></div>
+                  <div class="field wide"><label>Director's bio</label><textarea>I direct intimate cinematic stories with practical magic, precise sound design, and characters who reveal themselves through small gestures.</textarea></div>
+                </div>
+              </div>
+              <div class="setting-group"><h3>Profile accent</h3><p>A restrained signature color for verified marks, focus states and your public profile light.</p><div class="choice-grid" data-choice-group><button class="choice active"><b class="blue">Cinema blue</b><span>Cool, dimensional, familiar.</span></button><button class="choice"><b class="violet">Velvet</b><span>Expressive, nocturnal, soft.</span></button><button class="choice"><b class="amber">Gold print</b><span>Editorial, warm, archival.</span></button></div></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="appearance">
+              <div class="setting-group"><h3>Interface atmosphere</h3><p>Keep the same visual identity while choosing how densely it presents information.</p><div class="choice-grid" data-choice-group><button class="choice active"><b>Projection House</b><span>Deep glass, atmospheric light, cinematic type.</span></button><button class="choice"><b>Focus room</b><span>Quieter surfaces and less peripheral motion.</span></button><button class="choice"><b>High contrast</b><span>Stronger separation and accessibility cues.</span></button></div></div>
+              <div class="setting-group"><h3>Motion and density</h3><p>Fine-grained comfort controls apply across every surface.</p><div class="toggle-row"><div><b>Ambient motion</b><small>Slow light and material movement outside editing canvases.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div><div class="toggle-row"><div><b>Reduced motion</b><small>Keep meaning while removing travel and parallax.</small></div><button class="toggle" data-toggle aria-pressed="false"></button></div><div class="toggle-row"><div><b>Compact data rows</b><small>Show more technical detail in libraries and settings.</small></div><button class="toggle" data-toggle aria-pressed="false"></button></div></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="notifications">
+              <div class="setting-group"><h3>Production events</h3><p>Render completion and failures remain prominent; progress noise stays quiet.</p><div class="toggle-row"><div><b>Render completed</b><small>Browser and email delivery.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div><div class="toggle-row"><div><b>Needs your attention</b><small>Failed clips, approvals and expiring drafts.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div><div class="toggle-row"><div><b>Progress milestones</b><small>Scene generation and stitch checkpoints.</small></div><button class="toggle" data-toggle aria-pressed="false"></button></div></div>
+              <div class="setting-group"><h3>Quiet hours</h3><p>Critical security events still arrive immediately.</p><div class="fields"><div class="field"><label>From</label><input value="10:30 PM" /></div><div class="field"><label>Until</label><input value="7:00 AM" /></div></div></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="privacy">
+              <div class="setting-group"><h3>Discovery</h3><p>Choose which parts of your creative identity participate in public spaces.</p><div class="toggle-row"><div><b>Discoverable creator profile</b><small>Allow people to find your public filmography.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div><div class="toggle-row"><div><b>Show activity status</b><small>Display when you are in a shared room.</small></div><button class="toggle" data-toggle aria-pressed="false"></button></div><div class="toggle-row"><div><b>Appear on leaderboards</b><small>Include eligible public films in rankings.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div></div>
+              <div class="setting-group"><h3>Interaction gates</h3><p>Set a default before people follow, message or remix.</p><div class="choice-grid" data-choice-group><button class="choice active"><b>Open</b><span>Anyone can follow; followers can message.</span></button><button class="choice"><b>Mutuals</b><span>Messages require a mutual follow.</span></button><button class="choice"><b>Private</b><span>Requests require manual approval.</span></button></div></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="creator">
+              <div class="setting-group"><h3>Creator economy</h3><p>Supporter promises, payout readiness and audience goals in one accountable surface.</p><div class="choice-grid"><button class="choice active"><b>412 patrons</b><span>Three active supporter tiers.</span></button><button class="choice"><b>74% to goal</b><span>Season two production fund.</span></button><button class="choice"><b>Payout verified</b><span>Next transfer September 1.</span></button></div></div><div class="setting-group"><h3>Supporter access</h3><p>Choose what new work unlocks first.</p><div class="toggle-row"><div><b>Early screenings</b><small>Patrons see premieres 48 hours early.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div><div class="toggle-row"><div><b>Production notes</b><small>Share private director commentaries.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="playback">
+              <div class="setting-group"><h3>Playback defaults</h3><p>Applied to the Lobby, Library, Discover and review rooms.</p><div class="toggle-row"><div><b>Autoplay featured films</b><small>Begins muted and respects reduced motion.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div><div class="toggle-row"><div><b>Always show captions</b><small>Uses the film's primary caption track.</small></div><button class="toggle" data-toggle aria-pressed="false"></button></div><div class="toggle-row"><div><b>Prefer high quality previews</b><small>Uses more bandwidth on unmetered connections.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="effects">
+              <div class="setting-group"><h3>Signature finish</h3><p>The finishing assistant proposes these values; every project remains independently editable.</p><div class="choice-grid" data-choice-group><button class="choice active"><b>Subtle cinema</b><span>Fine grain, restrained bloom, soft halation.</span></button><button class="choice"><b>Clean digital</b><span>Sharp edges, low grain, neutral contrast.</span></button><button class="choice"><b>Dream print</b><span>Lifted blacks, color bleed, tactile texture.</span></button></div></div><div class="setting-group"><h3>Automatic enhancement</h3><div class="toggle-row"><div><b>Suggest natural VFX</b><small>Weather, particles and lighting motivated by the scene.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="studio">
+              <div class="setting-group"><h3>Learned creative profile</h3><p>Transparent signals inferred from your confirmed choices—not from abandoned drafts.</p><div class="choice-grid"><button class="choice active"><b>Measured pace</b><span>Longer shots and deliberate reveals.</span></button><button class="choice active"><b>35mm character</b><span>Natural falloff and human proximity.</span></button><button class="choice active"><b>Practical wonder</b><span>Magic with believable material rules.</span></button></div></div><div class="setting-group"><h3>Personalization</h3><div class="toggle-row"><div><b>Use my confirmed taste</b><small>Prefill Studio controls with familiar choices.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div><button class="btn" data-toast="Taste reset confirmation opened">Reset learned profile</button></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="billing">
+              <div class="setting-group"><h3>Spendable balance</h3><p>Ledger balance minus active production holds.</p><div style="display:flex;align-items:end;justify-content:space-between;gap:20px"><div><span class="serif blue" style="font-size:54px">4,280</span><span class="mono faint" style="font-size:8px;margin-left:9px">CREDITS AVAILABLE</span></div><button class="btn primary" data-toast="Credit packs opened">Add credits</button></div></div><div class="setting-group"><h3>Auto-recharge</h3><div class="toggle-row"><div><b>Recharge below 500 credits</b><small>Add 2,000 credits using the saved payment method.</small></div><button class="toggle" data-toggle aria-pressed="false"></button></div></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="security">
+              <div class="setting-group"><h3>Security posture</h3><p>All critical actions require fresh authentication.</p><div class="choice-grid"><button class="choice active"><b>2FA enabled</b><span>Authenticator app · verified today.</span></button><button class="choice active"><b>Passkey ready</b><span>MacBook Pro · last used 2h ago.</span></button><button class="choice"><b>3 sessions</b><span>Chicago, iPhone and rendering agent.</span></button></div></div><div class="setting-group"><button class="btn" data-toast="Session manager opened">Manage active sessions</button> <button class="btn" data-toast="Password flow opened">Change password</button></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="developers">
+              <div class="setting-group"><h3>API access</h3><p>Keys are scoped, named and shown once. Webhook deliveries retain a replayable audit.</p><div class="choice-grid"><button class="choice active"><b>2 active keys</b><span>Production and local development.</span></button><button class="choice"><b>4 webhooks</b><span>99.98% delivery this month.</span></button><button class="choice"><b>v1 stable</b><span>Latest contract revision.</span></button></div></div><div class="setting-group"><button class="btn primary" data-toast="Scoped key creator opened">Create API key</button> <button class="btn" data-toast="Webhook inspector opened">Inspect deliveries</button></div>
+            </div>
+
+            <div class="setting-section" data-settings-section="data">
+              <div class="setting-group"><h3>Your archive</h3><p>Export projects, films, captions, settings and account history in a portable package.</p><button class="btn blue-btn" data-toast="Data export requested">Request complete export</button></div><div class="setting-group"><h3 class="rose">Danger zone</h3><p>Deactivation is reversible. Deletion is delayed, verified and permanent after the recovery window.</p><button class="btn" data-toast="Deactivation confirmation opened">Deactivate account</button> <button class="btn" style="color:#ff9aae;background:rgba(255,87,117,.08)" data-toast="Deletion verification opened">Delete account</button></div>
+            </div>
+
+            <footer class="save-dock"><p>Changes are reviewed together · last saved 2 minutes ago</p><button class="btn primary" data-toast="Settings saved atomically">Save changes</button></footer>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script src="mock.js"></script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projection House — Studio mock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"><span></span><span></span></div>
+    <aside data-rail data-active="studio"></aside>
+    <main class="page">
+      <div class="page-inner">
+        <header class="topline">
+          <div class="breadcrumb"><a href="index.html">Expansion review</a><span>·</span><span>Studio / Creation workbench</span></div>
+          <div style="display:flex;gap:8px"><span class="live-chip"><i></i> All systems ready</span><button class="btn" data-toast="Draft history opened">Version 04 ⌄</button></div>
+        </header>
+
+        <section class="studio-frame" aria-label="Premium creation studio">
+          <nav class="tool-dock" aria-label="Studio modules">
+            <button class="tool active" data-studio-tool="Generate" aria-label="Generate">✦</button>
+            <button class="tool" data-studio-tool="Effects" aria-label="Effects">※</button>
+            <button class="tool" data-studio-tool="Image" aria-label="Image">▧</button>
+            <button class="tool" data-studio-tool="Photo" aria-label="Photo edit">◫</button>
+            <span style="width:28px;height:1px;background:rgba(255,255,255,.05);margin:4px"></span>
+            <button class="tool" data-studio-tool="Cast" aria-label="Cast">◎</button>
+            <button class="tool" data-studio-tool="Voice" aria-label="Voice">♬</button>
+            <button class="tool" data-studio-tool="Music" aria-label="Music">♫</button>
+            <button class="tool" data-studio-tool="Worlds" aria-label="Worlds">◇</button>
+            <span style="width:28px;height:1px;background:rgba(255,255,255,.05);margin:4px"></span>
+            <button class="tool" data-studio-tool="Look" aria-label="Look">◐</button>
+            <button class="tool" data-studio-tool="Story" aria-label="Story">⌇</button>
+            <button class="tool" data-studio-tool="Templates" aria-label="Templates">▦</button>
+          </nav>
+
+          <aside class="studio-config">
+            <p class="eyebrow">Create · Production layer</p>
+            <h1 data-studio-title>Generate</h1>
+            <p data-studio-desc>Frame the idea, select the model, and set the production contract.</p>
+
+            <div class="config-label">Production mode</div>
+            <div class="mode-grid" data-choice-group>
+              <button class="mode-card active"><b>Text to video</b><small>Direct a new sequence from language.</small></button>
+              <button class="mode-card"><b>Image to video</b><small>Animate a reference or key frame.</small></button>
+              <button class="mode-card"><b>Avatar scene</b><small>Perform with a continuity-safe cast.</small></button>
+              <button class="mode-card"><b>B-roll</b><small>Generate supporting editorial footage.</small></button>
+              <button class="mode-card"><b>Video to video</b><small>Restyle movement you already have.</small></button>
+              <button class="mode-card"><b>Motion transfer</b><small>Carry performance into a character.</small></button>
+            </div>
+
+            <div class="config-label">Creative brief</div>
+            <div class="prompt-box" contenteditable="true" role="textbox" aria-label="Creative brief">At blue hour, <span class="prompt-token">@Aaliyah</span> finds a small paper theatre glowing beneath the last bridge. Slow push in, practical fog, the feeling of remembering a place that never existed.</div>
+
+            <div class="config-label">Image model</div>
+            <div class="engine-list" data-choice-group>
+              <button class="engine active"><span><strong>Seedance 2</strong><small>Native audio · cinematic movement · continuity</small></span><b>34 cr</b></button>
+              <button class="engine"><span><strong>Kling V3</strong><small>Expressive performance · image control</small></span><b>28 cr</b></button>
+              <button class="engine"><span><strong>Veo 3</strong><small>High fidelity · sound-aware generation</small></span><b>46 cr</b></button>
+            </div>
+
+            <div class="config-label">Format</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px" data-choice-group><button class="pill active">16:9</button><button class="pill">9:16</button><button class="pill">1:1</button><button class="pill">10 sec</button><button class="pill">4K finish</button></div>
+          </aside>
+
+          <div class="studio-stage">
+            <nav class="stage-toolbar" data-choice-group aria-label="Stage view"><button class="active">Preview</button><button>Storyboard</button><button>References</button><button>Contract</button></nav>
+            <div class="canvas">
+              <div class="canvas-media">
+                <img src="cinema-assets/env/rift.jpg" alt="Studio preview of an impossible city scene" />
+                <span class="shot-chip">SHOT 01 · 35MM · DOLLY IN · BLUE HOUR</span>
+                <button class="btn" style="position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(5,8,14,.64);backdrop-filter:blur(20px)" data-toast="Preview playback started">▷ Preview movement</button>
+              </div>
+              <div class="selection-row" aria-label="Production selections">
+                <button class="selection" data-toast="Cast module opened"><img src="cinema-assets/avatars/aaliyah-johnson-front.webp" alt="" /><span><b>Aaliyah James</b><small>Lead · continuity locked</small></span><span class="blue">◎</span></button>
+                <button class="selection" data-toast="World module opened"><img src="cinema-assets/env/rift.jpg" alt="" /><span><b>Blue bridge</b><small>World · dusk overcast</small></span><span class="blue">◇</span></button>
+                <button class="selection" data-toast="Look module opened"><span style="display:grid;width:28px;height:28px;place-items:center;border-radius:8px;background:linear-gradient(135deg,#36588b,#c9967d)">◐</span><span><b>Soft print</b><small>Grade · fine grain</small></span><span class="blue">⌁</span></button>
+                <button class="selection" data-toast="Music module opened"><span style="display:grid;width:28px;height:28px;place-items:center;border-radius:8px;background:rgba(180,142,255,.10)" class="violet">♫</span><span><b>Glass & felt</b><small>Score · restrained</small></span><span class="violet">♬</span></button>
+              </div>
+            </div>
+            <footer class="composition">
+              <div class="composition-copy"><span class="aperture-mark" style="width:34px;height:34px;border-radius:10px;font-size:13px">◇</span><div><b>The paper theatre beneath the bridge · Shot 01 of 04</b><span>SEEDANCE 2 · 16:9 · 10 SEC · NATIVE AUDIO · 4K FINISH</span></div></div>
+              <div class="create-cluster"><span class="cost">34 credits · protected hold</span><a class="btn primary" href="loading.html">Create sequence&nbsp; →</a></div>
+            </footer>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="mock.js"></script>
+  </body>
+</html>

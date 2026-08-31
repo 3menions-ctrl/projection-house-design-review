@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projection House — Loading motion mock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient" aria-hidden="true"><span></span><span></span></div>
+    <main class="loading-page">
+      <section class="loading-house" aria-label="Production loading state">
+        <header class="loading-top">
+          <a class="btn ghost" href="studio.html">← Return to Studio</a>
+          <div style="display:flex;align-items:center;gap:8px"><span class="live-chip"><i></i> Production healthy</span><button class="btn icon-btn" data-replay-loading aria-label="Replay loading motion">↻</button></div>
+        </header>
+
+        <div class="loading-core">
+          <div class="aperture" aria-hidden="true"><div class="aperture-ring"></div><div class="aperture-mark">◇</div></div>
+          <p class="eyebrow">Production 4D7A · Scene-aware render</p>
+          <h1>Directing the light.</h1>
+          <p>Your creative contract is locked. Four shots are moving through generation in parallel where continuity allows, then the house will assemble picture, sound and finish.</p>
+          <div class="progress-line"><i></i></div>
+          <div class="progress-meta"><span>Scene 03 · Motion generation</span><span>68% · about 1m 42s</span></div>
+        </div>
+
+        <div class="render-map" aria-label="Render progress">
+          <article class="render-step done"><b>Brief locked</b><small>Cast, world, camera and billing contract verified.</small><div class="mini-progress"><i style="width:100%;background:var(--green)"></i></div></article>
+          <article class="render-step done"><b>Key frames</b><small>Four continuity-safe scene anchors approved.</small><div class="mini-progress"><i style="width:100%;background:var(--green)"></i></div></article>
+          <article class="render-step active"><b>Motion</b><small>Shot 03 is rendering. Shot 04 is parked behind continuity.</small><div class="mini-progress"><i style="width:68%"></i></div></article>
+          <article class="render-step"><b>Picture & sound</b><small>Stitch, dialogue, score and loudness pass.</small><div class="mini-progress"><i style="width:4%"></i></div></article>
+          <article class="render-step"><b>Final print</b><small>Grade, captions, 4K upscale and delivery checks.</small><div class="mini-progress"><i style="width:0"></i></div></article>
+        </div>
+
+        <footer class="render-log">
+          <div class="log-lines"><span>20:41:08 · Shot 02 completed · tail frame handed to continuity</span><span>20:41:12 · Shot 03 accepted by Seedance · native audio enabled</span><span>20:41:16 · Director critic measuring movement and identity…</span></div>
+          <div style="display:flex;gap:8px"><button class="btn" data-toast="Production minimized; completion alert remains active">Minimize</button><button class="btn ghost" data-toast="Cancellation guard opened">Cancel safely</button></div>
+        </footer>
+      </section>
+    </main>
+    <script src="mock.js"></script>
+  </body>
+</html>
