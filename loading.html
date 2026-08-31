@@ -6,35 +6,66 @@
     <title>Projection House — Loading motion mock</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="ambient" aria-hidden="true"><span></span><span></span></div>
+  <body class="loading-body">
+    <div class="loading-backdrop" aria-hidden="true"><img src="cinema-assets/env/rift.jpg" alt="" /><i></i></div>
     <main class="loading-page">
-      <section class="loading-house" aria-label="Production loading state">
+      <section class="loading-house loading-house-v2" aria-label="Production loading state">
         <header class="loading-top">
-          <a class="btn ghost" href="studio.html">← Return to Studio</a>
-          <div style="display:flex;align-items:center;gap:8px"><span class="live-chip"><i></i> Production healthy</span><button class="btn icon-btn" data-replay-loading aria-label="Replay loading motion">↻</button></div>
+          <a class="loading-return" href="studio.html"><span>←</span><span><b>The Director’s Desk</b><small>The Crossing · Draft 04</small></span></a>
+          <div class="loading-status-cluster">
+            <span class="contract-lock">◇ Contract 4D7A locked</span>
+            <span class="live-chip"><i></i> Production healthy</span>
+            <button class="btn icon-btn" data-replay-loading aria-label="Replay loading motion">↻</button>
+          </div>
         </header>
 
-        <div class="loading-core">
-          <div class="aperture" aria-hidden="true"><div class="aperture-ring"></div><div class="aperture-mark">◇</div></div>
-          <p class="eyebrow">Production 4D7A · Scene-aware render</p>
-          <h1>Directing the light.</h1>
-          <p>Your creative contract is locked. Four shots are moving through generation in parallel where continuity allows, then the house will assemble picture, sound and finish.</p>
-          <div class="progress-line"><i></i></div>
-          <div class="progress-meta"><span>Scene 03 · Motion generation</span><span>68% · about 1m 42s</span></div>
+        <div class="loading-stage-v2">
+          <section class="loading-copy-v2">
+            <div class="production-index"><span>PRINT / 04</span><i></i><span>68%</span></div>
+            <p class="eyebrow">Live production · Continuity-aware render</p>
+            <h1>The house is<br /><em>directing the light.</em></h1>
+            <p class="loading-lead">Your creative contract is locked. Four shots are moving in continuity order; picture, dialogue, score and finish assemble only after every handoff is verified.</p>
+            <div class="progress-line"><i></i></div>
+            <div class="progress-meta"><span>Scene 03 · Motion generation</span><span>about 1m 42s</span></div>
+            <dl class="loading-facts">
+              <div><dt>Route</dt><dd>Lightbridge → Wan 3.0</dd></div>
+              <div><dt>Held</dt><dd>64 of 80 cr ceiling</dd></div>
+              <div><dt>Master</dt><dd>4K · 60 fps · 10-bit</dd></div>
+            </dl>
+          </section>
+
+          <section class="render-theatre" aria-label="Live render preview">
+            <div class="projector-beam" aria-hidden="true"></div>
+            <div class="render-screen">
+              <img src="cinema-assets/env/rift.jpg" alt="Scene three rendering preview" />
+              <div class="render-scan" aria-hidden="true"></div>
+              <div class="render-screen-head"><span>SC 03 / THE PASSAGE</span><span>FRAME 0218 / 0540</span></div>
+              <div class="render-screen-foot"><span>identity 98.4</span><span>motion 68.0</span><span>continuity tail armed</span></div>
+              <div class="aperture compact-aperture" aria-hidden="true"><div class="aperture-ring"></div><div class="aperture-mark">◇</div></div>
+              <div class="render-critic"><i></i><span><b>Director critic</b><small>Measuring movement, face and material light</small></span></div>
+            </div>
+            <div class="render-reel" aria-label="Scene render queue">
+              <article class="complete"><span>01</span><img src="cinema-assets/env/studio-bg.jpg" alt="Scene one" /><div><b>Blue hour</b><small>7.2s · accepted</small></div><i>✓</i></article>
+              <article class="complete"><span>02</span><img src="cinema-assets/cover-park-bridge.jpg" alt="Scene two" /><div><b>The signal</b><small>9.4s · tail handed off</small></div><i>✓</i></article>
+              <article class="rendering"><span>03</span><img src="cinema-assets/env/rift.jpg" alt="Scene three" /><div><b>The passage</b><small>12.1s · frame 218</small></div><i>68%</i></article>
+              <article><span>04</span><img src="cinema-assets/env/cosmos.jpg" alt="Scene four" /><div><b>Return</b><small>9.3s · continuity wait</small></div><i>···</i></article>
+            </div>
+          </section>
         </div>
 
-        <div class="render-map" aria-label="Render progress">
-          <article class="render-step done"><b>Brief locked</b><small>Cast, world, camera and billing contract verified.</small><div class="mini-progress"><i style="width:100%;background:var(--green)"></i></div></article>
-          <article class="render-step done"><b>Key frames</b><small>Four continuity-safe scene anchors approved.</small><div class="mini-progress"><i style="width:100%;background:var(--green)"></i></div></article>
-          <article class="render-step active"><b>Motion</b><small>Shot 03 is rendering. Shot 04 is parked behind continuity.</small><div class="mini-progress"><i style="width:68%"></i></div></article>
-          <article class="render-step"><b>Picture & sound</b><small>Stitch, dialogue, score and loudness pass.</small><div class="mini-progress"><i style="width:4%"></i></div></article>
-          <article class="render-step"><b>Final print</b><small>Grade, captions, 4K upscale and delivery checks.</small><div class="mini-progress"><i style="width:0"></i></div></article>
-        </div>
+        <section class="render-map render-map-v2" aria-label="Production choreography">
+          <article class="render-step done"><div class="step-top"><span>01</span><b>Contract</b><i>✓</i></div><small>Cast, world, route and billing authority verified.</small><div class="mini-progress"><i style="width:100%;background:var(--green)"></i></div></article>
+          <article class="render-step done"><div class="step-top"><span>02</span><b>Control frames</b><i>✓</i></div><small>Four continuity-safe visual anchors approved.</small><div class="mini-progress"><i style="width:100%;background:var(--green)"></i></div></article>
+          <article class="render-step active"><div class="step-top"><span>03</span><b>Motion</b><i>68%</i></div><small>Shot 03 is moving. Shot 04 waits for its tail frame.</small><div class="mini-progress"><i style="width:68%"></i></div></article>
+          <article class="render-step"><div class="step-top"><span>04</span><b>Picture</b><i>WAIT</i></div><small>Assembly, transitions and continuity inspection.</small><div class="mini-progress"><i style="width:5%"></i></div></article>
+          <article class="render-step"><div class="step-top"><span>05</span><b>Sound</b><i>WAIT</i></div><small>Dialogue, glass-and-felt score and loudness pass.</small><div class="mini-progress"><i style="width:0"></i></div></article>
+          <article class="render-step"><div class="step-top"><span>06</span><b>Final print</b><i>WAIT</i></div><small>Grade, captions, 4K upscale and delivery checks.</small><div class="mini-progress"><i style="width:0"></i></div></article>
+        </section>
 
-        <footer class="render-log">
-          <div class="log-lines"><span>20:41:08 · Shot 02 completed · tail frame handed to continuity</span><span>20:41:12 · Shot 03 accepted by Seedance · native audio enabled</span><span>20:41:16 · Director critic measuring movement and identity…</span></div>
-          <div style="display:flex;gap:8px"><button class="btn" data-toast="Production minimized; completion alert remains active">Minimize</button><button class="btn ghost" data-toast="Cancellation guard opened">Cancel safely</button></div>
+        <footer class="render-log render-log-v2">
+          <div class="render-log-title"><span class="eyebrow">Production narration</span><small>Durable events · newest last</small></div>
+          <div class="log-lines"><span><time>20:41:08</time> Shot 02 accepted · tail frame handed to continuity</span><span><time>20:41:12</time> Shot 03 admitted to Wan 3.0 · native audio enabled</span><span><time>20:41:16</time> Director critic measuring movement and identity…</span></div>
+          <div class="render-controls"><button class="btn" data-toast="Production minimized; completion alert remains active">Minimize</button><button class="btn ghost" data-toast="Cancellation guard opened">Cancel safely</button></div>
         </footer>
       </section>
     </main>

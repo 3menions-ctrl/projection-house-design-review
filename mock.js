@@ -3,7 +3,7 @@
   if (rail) {
     const active = rail.dataset.active;
     const items = [
-      ["studio", "studio.html", "✦", "Studio"],
+      ["studio", "studio.html", "✦", "Director Chat"],
       ["avatars", "avatars.html", "◉", "Avatars"],
       ["profile", "profile.html", "◎", "Profile"],
       ["settings", "settings.html", "⌁", "Settings"],
@@ -13,10 +13,10 @@
     rail.className = "app-rail";
     rail.innerHTML = `
       <a class="rail-brand" href="index.html" aria-label="Expansion review">◇</a>
-      <button class="rail-item" type="button" data-toast="New project opens in Studio" aria-label="New project">＋<span class="rail-tip">New project</span></button>
+      <button class="rail-item" type="button" data-toast="New project opens at the Director’s Desk" aria-label="New project">＋<span class="rail-tip">New project</span></button>
       ${items.map(([id, href, icon, label]) => `<a class="rail-item ${active === id ? "active" : ""}" href="${href}" aria-label="${label}">${icon}<span class="rail-tip">${label}</span></a>`).join("")}
       <span class="rail-spacer"></span>
-      <a class="rail-item" href="index.html" aria-label="Review gallery">↗<span class="rail-tip">Review gallery</span></a>
+      <a class="rail-item" href="../projection-house-live/index.html" aria-label="Implemented rooms">↗<span class="rail-tip">Implemented rooms</span></a>
     `;
   }
 
@@ -75,7 +75,7 @@
     creator: ["Your economy", "Creator", "Shape patron tiers, audience goals, payout identity and supporter access."],
     playback: ["Content defaults", "Playback", "Set autoplay, captions, preview quality and generation handoff defaults."],
     effects: ["Your signature look", "Effects & VFX", "Build a reusable finishing fingerprint for enhancement, grain and atmosphere."],
-    studio: ["What it has learned", "Studio profile", "Inspect and tune the creative taste Small Bridges learns from your choices."],
+    studio: ["What it has learned", "Director taste", "Inspect and tune the creative taste Small Bridges learns from your confirmed choices."],
     billing: ["Credits & invoices", "Billing", "See live balance, holds, auto-recharge rules, invoices and spend history."],
     security: ["Account safety", "Security", "Manage password, passkeys, 2FA, active sessions and trusted devices."],
     developers: ["Build on us", "Developers", "Create scoped API keys, configure webhooks and inspect delivery health."],
@@ -105,30 +105,91 @@
     });
   }
 
-  const tools = document.querySelectorAll("[data-studio-tool]");
-  const toolTitle = document.querySelector("[data-studio-title]");
-  const toolDesc = document.querySelector("[data-studio-desc]");
-  const toolCopy = {
-    Generate: "Frame the idea, select the model, and set the production contract.",
-    Effects: "Apply cinematic effects and physically inspired VFX treatments.",
-    Image: "Generate key art, references, storyboards and production stills.",
-    Photo: "Repair, relight, reframe and transform an existing photograph.",
-    Cast: "Build a continuity-safe ensemble from your characters and house talent.",
-    Voice: "Direct narration, dialogue, delivery and multilingual performance.",
-    Music: "Shape the score, stems, timing, energy and emotional movement.",
-    Worlds: "Choose a production-ready environment and its lighting logic.",
-    Look: "Define grade, lens character, grain and finishing texture.",
-    Story: "Develop the logline, beat map and scene-to-scene dramatic structure.",
-    Templates: "Start from proven formats while keeping every layer editable.",
-  };
-  tools.forEach((tool) => {
-    tool.addEventListener("click", () => {
-      tools.forEach((item) => item.classList.remove("active"));
-      tool.classList.add("active");
-      if (toolTitle) toolTitle.textContent = tool.dataset.studioTool;
-      if (toolDesc) toolDesc.textContent = toolCopy[tool.dataset.studioTool] || "Configure this production layer.";
+  // Director Chat — Studio is the conversational filmmaking workspace. The
+  // tabs only change which evidence is being inspected; creative choices are
+  // deliberately sent through the conversation, matching the real contract.
+  const directorViews = document.querySelectorAll("[data-director-view]");
+  directorViews.forEach((button) => {
+    button.addEventListener("click", () => {
+      const view = button.dataset.directorView;
+      directorViews.forEach((item) => item.classList.remove("active"));
+      button.classList.add("active");
+      document.querySelectorAll("[data-director-panel]").forEach((panel) => {
+        const selected = panel.dataset.directorPanel === view;
+        panel.classList.toggle("active", selected);
+        panel.hidden = !selected;
+      });
     });
   });
+
+  const cutImage = document.querySelector("[data-cut-image]");
+  const cutLabel = document.querySelector("[data-cut-label]");
+  document.querySelectorAll("[data-scene-card]").forEach((card) => {
+    card.addEventListener("click", () => {
+      document.querySelectorAll("[data-scene-card]").forEach((item) => item.classList.remove("active"));
+      card.classList.add("active");
+      if (cutImage) cutImage.src = card.dataset.image;
+      if (cutLabel) cutLabel.textContent = card.dataset.label;
+    });
+  });
+
+  const directorLog = document.querySelector("[data-director-log]");
+  const directorInput = document.querySelector("[data-director-input]");
+  const directorSend = document.querySelector("[data-director-send]");
+  const composerWell = directorInput?.closest(".composer-well");
+  const directorReplies = {
+    "Ask the whole crew to cover it.": "I’ve called the Director, Cinematographer, Production Designer, Editor and Sound Designer. Their coverage will land here as receipts before anything is priced.",
+    "Keep it to one slow dolly-in.": "Good. One patient dolly-in is now the camera plan for the crossing. I’ll preserve the bridge axis and let the practical light do the reveal.",
+    "Show me the script before we plan shots.": "The screenplay is open on the board. Read it there; when you are ready, tell me what the camera should protect.",
+    "Make the reveal quieter": "I’ve pulled the score back, removed the second reaction beat and let the paper mechanism carry the reveal.",
+    "Read the current cut": "Four scenes, thirty-eight seconds: arrival, signal, passage, return. Three control frames exist; the final camera plan is still open.",
+    "Use my usual pacing": "I’m using your confirmed taste: measured entries, a held reveal and no cut that arrives before the gesture finishes.",
+  };
+
+  const sendDirectorLine = (raw) => {
+    const line = raw.trim();
+    if (!line || !directorLog) return;
+
+    const userTurn = document.createElement("article");
+    userTurn.className = "user-turn director-echo";
+    const userCopy = document.createElement("p");
+    userCopy.textContent = line;
+    userTurn.appendChild(userCopy);
+    directorLog.appendChild(userTurn);
+
+    const nextMove = directorLog.querySelector(".next-move-card");
+    if (nextMove) nextMove.remove();
+
+    const directorTurn = document.createElement("article");
+    directorTurn.className = "director-turn compact-turn director-echo";
+    const label = document.createElement("p");
+    label.className = "turn-label";
+    label.textContent = "Small Bridges";
+    const copy = document.createElement("p");
+    copy.textContent = directorReplies[line] || "I have that direction. I’ll reconcile it with the current story, continuity sources, camera plan and spend ceiling before proposing the next move.";
+    directorTurn.append(label, copy);
+    directorLog.appendChild(directorTurn);
+
+    if (directorInput) directorInput.value = "";
+    composerWell?.classList.remove("has-copy");
+    directorLog.scrollTo({ top: directorLog.scrollHeight, behavior: "smooth" });
+    announce("Direction entered into the conversation");
+  };
+
+  document.querySelectorAll("[data-director-reply]").forEach((button) => {
+    button.addEventListener("click", () => sendDirectorLine(button.dataset.directorReply || button.textContent || ""));
+  });
+  document.querySelectorAll("[data-director-suggestion]").forEach((button) => {
+    button.addEventListener("click", () => sendDirectorLine(button.textContent || ""));
+  });
+  directorInput?.addEventListener("input", () => composerWell?.classList.toggle("has-copy", !!directorInput.value.trim()));
+  directorInput?.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      sendDirectorLine(directorInput.value);
+    }
+  });
+  directorSend?.addEventListener("click", () => sendDirectorLine(directorInput?.value || ""));
 
   const avatarSearch = document.querySelector("[data-avatar-search]");
   const avatarCards = [...document.querySelectorAll("[data-avatar-card]")];
@@ -193,6 +254,14 @@
       helpCount.textContent = q ? `${shown} matched guides` : "Search all guides";
     });
   }
+  document.querySelectorAll("[data-help-query]").forEach((button) => {
+    button.addEventListener("click", () => {
+      if (!helpSearch) return;
+      helpSearch.value = button.dataset.helpQuery || "";
+      helpSearch.dispatchEvent(new Event("input", { bubbles: true }));
+      helpSearch.focus();
+    });
+  });
 
   document.querySelectorAll("[data-support-type]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -206,7 +275,7 @@
   const replay = document.querySelector("[data-replay-loading]");
   replay?.addEventListener("click", () => {
     const house = document.querySelector(".loading-house");
-    const animated = house ? [...house.querySelectorAll(".aperture, .aperture-ring, .progress-line i")] : [];
+    const animated = house ? [...house.querySelectorAll(".aperture, .aperture-ring, .progress-line i, .render-scan, .projector-beam")] : [];
     animated.forEach((element) => { element.style.animation = "none"; });
     void house?.offsetWidth;
     animated.forEach((element) => { element.style.removeProperty("animation"); });

@@ -6,18 +6,18 @@
     <title>Projection House — Settings mock</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="settings-body">
     <div class="ambient" aria-hidden="true"><span></span><span></span></div>
     <aside data-rail data-active="settings"></aside>
     <main class="page">
       <div class="page-inner">
         <header class="topline">
-          <div class="breadcrumb"><a href="index.html">Expansion review</a><span>·</span><span>Settings / Control room</span></div>
-          <div class="live-chip"><i></i> 12 capability domains</div>
+          <div class="breadcrumb"><a href="index.html">Projection House</a><span>·</span><span>Settings / Control room</span></div>
+          <div class="live-chip"><i></i> 12 domains · Synced</div>
         </header>
-        <div class="settings-layout">
+        <div class="settings-layout settings-layout-v2">
           <aside class="settings-nav" aria-label="Settings sections">
-            <div class="settings-id"><img src="cinema-assets/avatars/aaliyah-johnson-front.webp" alt="" /><div><strong>Aaliyah James</strong><span>PRO CREATOR · 4,280 CR</span></div></div>
+            <div class="settings-id"><img src="cinema-assets/avatars/aaliyah-johnson-front.webp" alt="" /><div><strong>Aaliyah James</strong><span>PRO CREATOR · 4,280 CR</span></div><i title="Profile synced"></i></div>
             <nav class="settings-list">
               <button class="settings-link active" data-settings-link="identity"><span>◎</span><span>Identity</span></button>
               <button class="settings-link" data-settings-link="appearance"><span>◐</span><span>Appearance</span></button>
@@ -26,19 +26,23 @@
               <button class="settings-link" data-settings-link="creator"><span>♢</span><span>Creator</span></button>
               <button class="settings-link" data-settings-link="playback"><span>▷</span><span>Playback</span></button>
               <button class="settings-link" data-settings-link="effects"><span>✦</span><span>Effects & VFX</span></button>
-              <button class="settings-link" data-settings-link="studio"><span>⌁</span><span>Studio profile</span></button>
+              <button class="settings-link" data-settings-link="studio"><span>⌁</span><span>Director taste</span></button>
               <button class="settings-link" data-settings-link="billing"><span>₡</span><span>Billing</span></button>
               <button class="settings-link" data-settings-link="security"><span>⌾</span><span>Security</span></button>
               <button class="settings-link" data-settings-link="developers"><span>&lt;/&gt;</span><span>Developers</span></button>
               <button class="settings-link" data-settings-link="data"><span>□</span><span>Data & account</span></button>
             </nav>
+            <footer class="settings-nav-footer"><div><i></i><span><b>Account protected</b><small>2FA · passkey · 3 sessions</small></span></div><button data-settings-link="security">Review ↗</button></footer>
           </aside>
 
           <section class="settings-main">
+            <div class="settings-atmosphere" aria-hidden="true"><i></i><i></i></div>
             <header class="settings-head">
               <div><p class="eyebrow" data-settings-kicker>Who you are</p><h1 data-settings-title>Identity</h1><p class="lead" data-settings-lead>Name, handle, photos and the public story attached to your work.</p></div>
-              <div class="completion" title="Profile completion"><strong>78%</strong></div>
+              <div class="settings-overview"><div class="completion" title="Profile completion"><strong>78%</strong></div><div><span>Profile strength</span><b>Ready to be discovered</b><small>Two optional signals remain</small></div></div>
             </header>
+
+            <div class="settings-signal-strip" aria-label="Account state"><div><i class="green-signal"></i><span><b>Identity synced</b><small>Profile · credits · collaborations</small></span></div><div><i></i><span><b>Projection House</b><small>Atmosphere · standard density</small></span></div><div><i></i><span><b>Private by default</b><small>Drafts and uploads stay unlisted</small></span></div><div><i class="amber-signal"></i><span><b>Spend guard</b><small>Confirm every paid production</small></span></div></div>
 
             <div class="setting-section active" data-settings-section="identity">
               <div class="setting-group">
@@ -86,7 +90,7 @@
             </div>
 
             <div class="setting-section" data-settings-section="studio">
-              <div class="setting-group"><h3>Learned creative profile</h3><p>Transparent signals inferred from your confirmed choices—not from abandoned drafts.</p><div class="choice-grid"><button class="choice active"><b>Measured pace</b><span>Longer shots and deliberate reveals.</span></button><button class="choice active"><b>35mm character</b><span>Natural falloff and human proximity.</span></button><button class="choice active"><b>Practical wonder</b><span>Magic with believable material rules.</span></button></div></div><div class="setting-group"><h3>Personalization</h3><div class="toggle-row"><div><b>Use my confirmed taste</b><small>Prefill Studio controls with familiar choices.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div><button class="btn" data-toast="Taste reset confirmation opened">Reset learned profile</button></div>
+              <div class="setting-group"><h3>Learned creative profile</h3><p>Transparent signals inferred from your confirmed choices—not from abandoned drafts.</p><div class="choice-grid"><button class="choice active"><b>Measured pace</b><span>Longer shots and deliberate reveals.</span></button><button class="choice active"><b>35mm character</b><span>Natural falloff and human proximity.</span></button><button class="choice active"><b>Practical wonder</b><span>Magic with believable material rules.</span></button></div></div><div class="setting-group"><h3>Personalization</h3><div class="toggle-row"><div><b>Use my confirmed taste</b><small>Let the Director’s Desk begin from familiar choices.</small></div><button class="toggle on" data-toggle aria-pressed="true"></button></div><button class="btn" data-toast="Taste reset confirmation opened">Reset learned profile</button></div>
             </div>
 
             <div class="setting-section" data-settings-section="billing">

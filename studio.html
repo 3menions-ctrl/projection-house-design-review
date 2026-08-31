@@ -3,85 +3,199 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Projection House — Studio mock</title>
+    <title>Projection House — Director Chat mock</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="ambient" aria-hidden="true"><span></span><span></span></div>
+  <body class="director-body">
+    <div class="ambient director-ambient" aria-hidden="true"><span></span><span></span></div>
     <aside data-rail data-active="studio"></aside>
-    <main class="page">
-      <div class="page-inner">
-        <header class="topline">
-          <div class="breadcrumb"><a href="index.html">Expansion review</a><span>·</span><span>Studio / Creation workbench</span></div>
-          <div style="display:flex;gap:8px"><span class="live-chip"><i></i> All systems ready</span><button class="btn" data-toast="Draft history opened">Version 04 ⌄</button></div>
+    <main class="page director-page">
+      <div class="page-inner director-page-inner">
+        <header class="topline director-topline">
+          <div class="breadcrumb"><a href="index.html">Projection House</a><span>·</span><span>Studio / The Director’s Desk</span></div>
+          <div class="director-top-actions">
+            <span class="save-state"><i></i> Draft 04 saved</span>
+            <button class="credit-chip" data-toast="Credit ledger opened"><span>₡</span> 4,280 <small>available</small></button>
+            <button class="btn" data-toast="A clean conversation is ready">＋ New cut</button>
+          </div>
         </header>
 
-        <section class="studio-frame" aria-label="Premium creation studio">
-          <nav class="tool-dock" aria-label="Studio modules">
-            <button class="tool active" data-studio-tool="Generate" aria-label="Generate">✦</button>
-            <button class="tool" data-studio-tool="Effects" aria-label="Effects">※</button>
-            <button class="tool" data-studio-tool="Image" aria-label="Image">▧</button>
-            <button class="tool" data-studio-tool="Photo" aria-label="Photo edit">◫</button>
-            <span style="width:28px;height:1px;background:rgba(255,255,255,.05);margin:4px"></span>
-            <button class="tool" data-studio-tool="Cast" aria-label="Cast">◎</button>
-            <button class="tool" data-studio-tool="Voice" aria-label="Voice">♬</button>
-            <button class="tool" data-studio-tool="Music" aria-label="Music">♫</button>
-            <button class="tool" data-studio-tool="Worlds" aria-label="Worlds">◇</button>
-            <span style="width:28px;height:1px;background:rgba(255,255,255,.05);margin:4px"></span>
-            <button class="tool" data-studio-tool="Look" aria-label="Look">◐</button>
-            <button class="tool" data-studio-tool="Story" aria-label="Story">⌇</button>
-            <button class="tool" data-studio-tool="Templates" aria-label="Templates">▦</button>
-          </nav>
+        <section class="director-desk" aria-label="Premium Director Chat studio">
+          <aside class="director-conversation" aria-label="Conversation with the Director">
+            <header class="conversation-head">
+              <div>
+                <p class="eyebrow">Small Bridges · Live direction</p>
+                <h1>The Director’s Desk</h1>
+              </div>
+              <span class="director-presence"><i></i> Listening</span>
+            </header>
 
-          <aside class="studio-config">
-            <p class="eyebrow">Create · Production layer</p>
-            <h1 data-studio-title>Generate</h1>
-            <p data-studio-desc>Frame the idea, select the model, and set the production contract.</p>
-
-            <div class="config-label">Production mode</div>
-            <div class="mode-grid" data-choice-group>
-              <button class="mode-card active"><b>Text to video</b><small>Direct a new sequence from language.</small></button>
-              <button class="mode-card"><b>Image to video</b><small>Animate a reference or key frame.</small></button>
-              <button class="mode-card"><b>Avatar scene</b><small>Perform with a continuity-safe cast.</small></button>
-              <button class="mode-card"><b>B-roll</b><small>Generate supporting editorial footage.</small></button>
-              <button class="mode-card"><b>Video to video</b><small>Restyle movement you already have.</small></button>
-              <button class="mode-card"><b>Motion transfer</b><small>Carry performance into a character.</small></button>
+            <div class="film-rail" aria-label="Film progress: step 3 of 6, Shots">
+              <span class="passed">Story</span><i></i><span class="passed">Look</span><i></i><span class="current">Shots</span><i></i><span>Price</span><i></i><span>Shoot</span><i></i><span>Watch</span>
             </div>
 
-            <div class="config-label">Creative brief</div>
-            <div class="prompt-box" contenteditable="true" role="textbox" aria-label="Creative brief">At blue hour, <span class="prompt-token">@Aaliyah</span> finds a small paper theatre glowing beneath the last bridge. Slow push in, practical fog, the feeling of remembering a place that never existed.</div>
+            <div class="conversation-log" data-director-log>
+              <div class="chat-event"><i></i><span>Project restored · The Crossing · draft 04</span><time>20:41</time></div>
 
-            <div class="config-label">Image model</div>
-            <div class="engine-list" data-choice-group>
-              <button class="engine active"><span><strong>Seedance 2</strong><small>Native audio · cinematic movement · continuity</small></span><b>34 cr</b></button>
-              <button class="engine"><span><strong>Kling V3</strong><small>Expressive performance · image control</small></span><b>28 cr</b></button>
-              <button class="engine"><span><strong>Veo 3</strong><small>High fidelity · sound-aware generation</small></span><b>46 cr</b></button>
+              <article class="user-turn">
+                <div class="sent-reference"><img src="cinema-assets/cover-park-bridge.jpg" alt="Park bridge reference" /><span>visual-reference.jpg</span></div>
+                <p>A quiet crossing at blue hour. Aaliyah sees a paper theatre glowing beneath the bridge. Keep it intimate, practical, and under 80 credits.</p>
+              </article>
+
+              <article class="director-turn">
+                <p class="turn-label">Small Bridges</p>
+                <p>I see a four-scene miniature about choosing whether to follow impossible light. I’ve kept the camera near Aaliyah, seated the blue-hour world, and held the finish to a restrained 35mm print.</p>
+                <div class="verb-receipts"><span>◆ story shaped</span><span>◆ world seated</span><span>◆ ceiling 80 cr</span></div>
+              </article>
+
+              <article class="thinking-turn">
+                <p class="turn-label">✦ Cinematographer · thinking</p>
+                <p>The reveal wants one patient move, not coverage for coverage’s sake. Preserve the bridge axis so the theatre feels discovered rather than inserted.</p>
+              </article>
+
+              <article class="director-turn compact-turn">
+                <p class="turn-label">Small Bridges</p>
+                <p>The story and look are settled. Camera coverage is the one useful decision now.</p>
+              </article>
+
+              <section class="next-move-card" aria-label="Next Director decision">
+                <div class="next-move-kicker"><span>03 / Shots</span><span>one thing worth doing</span></div>
+                <h2>How should we cover the crossing?</h2>
+                <p>The crew can plan every camera pass, or the Director can keep this as a single patient movement.</p>
+                <div class="utterance-stack">
+                  <button class="active" data-director-reply="Ask the whole crew to cover it."><span>Ask the whole crew to cover it.</span><small>Director + camera + sound · est. 3 cr</small></button>
+                  <button data-director-reply="Keep it to one slow dolly-in."><span>Keep it to one slow dolly-in.</span><small>One authored camera pass</small></button>
+                  <button data-director-reply="Show me the script before we plan shots."><span>Show me the script first.</span><small>No project change</small></button>
+                </div>
+              </section>
+
+              <div class="director-suggestions" aria-label="Suggested directions">
+                <button data-director-suggestion>Make the reveal quieter</button>
+                <button data-director-suggestion>Read the current cut</button>
+                <button data-director-suggestion>Use my usual pacing</button>
+              </div>
             </div>
 
-            <div class="config-label">Format</div>
-            <div style="display:flex;flex-wrap:wrap;gap:6px" data-choice-group><button class="pill active">16:9</button><button class="pill">9:16</button><button class="pill">1:1</button><button class="pill">10 sec</button><button class="pill">4K finish</button></div>
+            <footer class="director-composer">
+              <div class="composer-tools">
+                <button data-toast="Picture picker opened" aria-label="Attach a reference">▧</button>
+                <button data-toast="Voice direction started" aria-label="Speak direction">◉</button>
+              </div>
+              <label class="composer-well">
+                <span>Direct in plain words</span>
+                <textarea data-director-input rows="2" placeholder="Change the story, ask a question, or say create…"></textarea>
+                <button data-director-send type="button" aria-label="Send direction">↵</button>
+              </label>
+            </footer>
           </aside>
 
-          <div class="studio-stage">
-            <nav class="stage-toolbar" data-choice-group aria-label="Stage view"><button class="active">Preview</button><button>Storyboard</button><button>References</button><button>Contract</button></nav>
-            <div class="canvas">
-              <div class="canvas-media">
-                <img src="cinema-assets/env/rift.jpg" alt="Studio preview of an impossible city scene" />
-                <span class="shot-chip">SHOT 01 · 35MM · DOLLY IN · BLUE HOUR</span>
-                <button class="btn" style="position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(5,8,14,.64);backdrop-filter:blur(20px)" data-toast="Preview playback started">▷ Preview movement</button>
+          <section class="director-board" aria-label="Film workspace — results only">
+            <header class="board-masthead">
+              <div>
+                <p class="eyebrow">Current cut · Results from the conversation</p>
+                <div class="board-title-row"><h2>The Crossing</h2><span>Draft 04</span></div>
+                <p class="board-logline">A woman follows a handmade theatre into a blue-hour passage that remembers every road she chose not to take.</p>
               </div>
-              <div class="selection-row" aria-label="Production selections">
-                <button class="selection" data-toast="Cast module opened"><img src="cinema-assets/avatars/aaliyah-johnson-front.webp" alt="" /><span><b>Aaliyah James</b><small>Lead · continuity locked</small></span><span class="blue">◎</span></button>
-                <button class="selection" data-toast="World module opened"><img src="cinema-assets/env/rift.jpg" alt="" /><span><b>Blue bridge</b><small>World · dusk overcast</small></span><span class="blue">◇</span></button>
-                <button class="selection" data-toast="Look module opened"><span style="display:grid;width:28px;height:28px;place-items:center;border-radius:8px;background:linear-gradient(135deg,#36588b,#c9967d)">◐</span><span><b>Soft print</b><small>Grade · fine grain</small></span><span class="blue">⌁</span></button>
-                <button class="selection" data-toast="Music module opened"><span style="display:grid;width:28px;height:28px;place-items:center;border-radius:8px;background:rgba(180,142,255,.10)" class="violet">♫</span><span><b>Glass & felt</b><small>Score · restrained</small></span><span class="violet">♬</span></button>
-              </div>
+              <div class="preflight-seal"><i>✓</i><span><b>Preflight clear</b><small>4 scenes · 38 sec</small></span></div>
+            </header>
+
+            <nav class="board-tabs" aria-label="Film workspace views">
+              <button class="active" data-director-view="cut">Living cut</button>
+              <button data-director-view="factory">Scene Factory <span>4</span></button>
+              <button data-director-view="script">Screenplay</button>
+              <button data-director-view="production">Production <span class="status-dot"></span></button>
+              <p>Board is evidence only · every choice stays in chat</p>
+            </nav>
+
+            <div class="board-scroll">
+              <section class="director-board-panel active" data-director-panel="cut">
+                <div class="living-cut">
+                  <div class="cut-frame">
+                    <img data-cut-image src="cinema-assets/cover-park-bridge.jpg" alt="The Crossing scene preview" />
+                    <div class="frame-vignette"></div>
+                    <div class="frame-top"><span data-cut-label>SC 02 · THE SIGNAL</span><span>35MM · T2.0 · 3200K</span></div>
+                    <div class="frame-time"><span>00:00:14:08</span><i></i><span>2.39:1</span></div>
+                    <button class="frame-play" data-toast="Living cut playback started" aria-label="Play living cut">▶</button>
+                    <blockquote>“Some lights do not ask to be followed.”</blockquote>
+                  </div>
+                  <div class="scene-strip" aria-label="Scene lineage">
+                    <button data-scene-card data-image="cinema-assets/env/studio-bg.jpg" data-label="SC 01 · BLUE HOUR"><span class="scene-number done">01</span><img src="cinema-assets/env/studio-bg.jpg" alt="Blue hour scene" /><span><b>Blue hour</b><small>7.2s · wide drift</small></span></button>
+                    <button class="active" data-scene-card data-image="cinema-assets/cover-park-bridge.jpg" data-label="SC 02 · THE SIGNAL"><span class="scene-number current">02</span><img src="cinema-assets/cover-park-bridge.jpg" alt="The signal scene" /><span><b>The signal</b><small>9.4s · slow dolly</small></span></button>
+                    <button data-scene-card data-image="cinema-assets/env/rift.jpg" data-label="SC 03 · THE PASSAGE"><span class="scene-number">03</span><img src="cinema-assets/env/rift.jpg" alt="The passage scene" /><span><b>The passage</b><small>12.1s · coverage open</small></span></button>
+                    <button data-scene-card data-image="cinema-assets/env/cosmos.jpg" data-label="SC 04 · RETURN"><span class="scene-number">04</span><img src="cinema-assets/env/cosmos.jpg" alt="Return scene" /><span><b>Return</b><small>9.3s · frame ready</small></span></button>
+                  </div>
+                </div>
+
+                <dl class="project-pulse">
+                  <div><dt>Running time</dt><dd>4 scenes · 38s</dd></div>
+                  <div><dt>Scene Factory</dt><dd>3/4 frames exposed</dd></div>
+                  <div><dt>Camera</dt><dd>7 shots · 3/4 covered</dd></div>
+                  <div><dt>Continuity</dt><dd>2/2 identities locked</dd></div>
+                  <div><dt>Delivery</dt><dd>4K · 60 fps · 10-bit</dd></div>
+                  <div><dt>Planned route</dt><dd>Lightbridge · quote next</dd></div>
+                </dl>
+
+                <div class="board-evidence-grid">
+                  <section class="lineage-panel">
+                    <div class="panel-heading"><div><p class="eyebrow">Scene Factory · Provenance</p><h3>The film knows where every image came from.</h3></div><span>6 real assets</span></div>
+                    <div class="lineage-flow">
+                      <div class="lineage-source"><span>INPUT</span><img src="cinema-assets/cover-park-bridge.jpg" alt="Visual reference" /><b>Visual reference</b><small>Composition + material light</small></div>
+                      <i>→</i>
+                      <div class="lineage-cast"><span>CAST SOURCES</span><div><img src="cinema-assets/avatars/aaliyah-johnson-front.webp" alt="Aaliyah" /><img src="cinema-assets/avatars/kenji-yamamoto-front.webp" alt="Kenji" /></div><b>Aaliyah · Kenji</b><small>Identity DNA locked</small></div>
+                      <i>→</i>
+                      <div class="lineage-source"><span>CONTROL FRAME</span><img src="cinema-assets/env/rift.jpg" alt="Control frame" /><b>The passage</b><small>3 camera passes authored</small></div>
+                    </div>
+                  </section>
+
+                  <aside class="decision-ledger">
+                    <div class="panel-heading"><div><p class="eyebrow">Decided in conversation</p><h3>Creative receipts.</h3></div><button data-toast="Version history opened">04 ↗</button></div>
+                    <dl>
+                      <div><dt>Story</dt><dd>Intimate magical realism</dd></div>
+                      <div><dt>Look</dt><dd>Soft print · blue hour</dd></div>
+                      <div><dt>Cast</dt><dd>Aaliyah James · continuity locked</dd></div>
+                      <div><dt>World</dt><dd>Bridge passage · practical fog</dd></div>
+                      <div><dt>Score</dt><dd>Glass &amp; felt · restrained</dd></div>
+                      <div><dt>Spend ceiling</dt><dd>80 credits · spoken</dd></div>
+                    </dl>
+                  </aside>
+                </div>
+              </section>
+
+              <section class="director-board-panel" data-director-panel="factory" hidden>
+                <div class="factory-head"><div><p class="eyebrow">Scene Factory · Frames &amp; camera passes</p><h3>Owned references become a continuity-safe film.</h3></div><span>3 exposed · 1 waiting</span></div>
+                <div class="factory-grid">
+                  <article><img src="cinema-assets/env/studio-bg.jpg" alt="Blue hour" /><header><span>SC 01</span><b>Blue hour</b><small>7.2 sec</small></header><p>Aaliyah reaches the bridge as the city falls quiet.</p><ul><li>Wide drift · 35mm</li><li>Hand detail · 85mm</li></ul></article>
+                  <article><img src="cinema-assets/cover-park-bridge.jpg" alt="The signal" /><header><span>SC 02</span><b>The signal</b><small>9.4 sec</small></header><p>A warm paper light appears beneath the last arch.</p><ul><li>Slow dolly-in · 50mm</li><li>Eye-line insert · 85mm</li></ul></article>
+                  <article><img src="cinema-assets/env/rift.jpg" alt="The passage" /><header><span>SC 03</span><b>The passage</b><small>12.1 sec</small></header><p>The bridge opens into a city made of remembered choices.</p><ul><li>Axis master · 35mm</li><li>Coverage awaiting answer</li></ul></article>
+                  <article class="pending-scene"><div class="frame-pending"><i></i><span>Frame awaiting camera plan</span></div><header><span>SC 04</span><b>Return</b><small>9.3 sec</small></header><p>She returns carrying a light small enough to keep.</p><ul><li>End frame reserved</li><li>Continuity tail available</li></ul></article>
+                </div>
+              </section>
+
+              <section class="director-board-panel" data-director-panel="script" hidden>
+                <div class="script-review-head"><div><p class="eyebrow">Screenplay · Revision 04</p><h3>The Crossing</h3></div><span>Fingerprint 8F2A · acceptance pending</span></div>
+                <div class="screenplay-page">
+                  <p class="slug">EXT. RIVER BRIDGE — BLUE HOUR</p>
+                  <p>AALIYAH crosses beneath the final arch. The city noise thins until only her footsteps remain.</p>
+                  <p>A paper theatre, no larger than a suitcase, glows beneath the stone.</p>
+                  <p class="character">AALIYAH</p><p class="dialogue">You weren’t here yesterday.</p>
+                  <p>The curtains part by themselves. Inside: the same bridge, the same blue hour, Aaliyah walking away in the opposite direction.</p>
+                  <p class="slug">INT. PAPER PASSAGE — CONTINUOUS</p>
+                  <p>She kneels. The miniature light climbs into her palm.</p>
+                  <p class="character">VOICE (O.S.)</p><p class="dialogue">Some lights do not ask to be followed.</p>
+                </div>
+                <div class="script-facts"><span>4 scenes</span><span>38 sec</span><span>2 speaking roles</span><span>7 camera passes</span><span class="amber">Accept inside the conversation</span></div>
+              </section>
+
+              <section class="director-board-panel" data-director-panel="production" hidden>
+                <div class="production-head"><div><p class="eyebrow">Durable production · Exact route report</p><h3>Lightbridge — Blender → Wan 3.0</h3><p>Physically authored VFX, continuity-aware segments, native audio, and a 4K finishing master.</p></div><span class="production-phase"><i></i> Ready for quote</span></div>
+                <div class="production-contract">
+                  <section><p class="eyebrow">Director-added plan</p><h4>The Crossing · 38 requested seconds</h4><dl><div><dt>Route</dt><dd>Lightbridge cinematic</dd></div><div><dt>Segments</dt><dd>4 authored · continuity chained</dd></div><div><dt>References</dt><dd>6 bound production sources</dd></div><div><dt>Delivery</dt><dd>3840×2160 · 60 fps · 10-bit</dd></div></dl></section>
+                  <section><p class="eyebrow">Financial safety</p><div class="quote-number"><strong>≤ 80</strong><span>credit ceiling</span></div><ul><li><i>✓</i> Zero-cost validation first</li><li><i>✓</i> Exact quote before approval</li><li><i>✓</i> Protected hold, charge on success</li><li><i>✓</i> Human click required to shoot</li></ul></section>
+                </div>
+                <div class="contract-line"><span>Next action lives in Director Chat</span><b>Check the plan · $0</b><small>The results board never spends or changes the film.</small></div>
+              </section>
             </div>
-            <footer class="composition">
-              <div class="composition-copy"><span class="aperture-mark" style="width:34px;height:34px;border-radius:10px;font-size:13px">◇</span><div><b>The paper theatre beneath the bridge · Shot 01 of 04</b><span>SEEDANCE 2 · 16:9 · 10 SEC · NATIVE AUDIO · 4K FINISH</span></div></div>
-              <div class="create-cluster"><span class="cost">34 credits · protected hold</span><a class="btn primary" href="loading.html">Create sequence&nbsp; →</a></div>
-            </footer>
-          </div>
+          </section>
         </section>
       </div>
     </main>

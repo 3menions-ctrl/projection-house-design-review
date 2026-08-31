@@ -12,8 +12,8 @@
     <main class="page">
       <div class="page-inner">
         <header class="topline">
-          <div class="breadcrumb"><a href="index.html">Expansion review</a><span>·</span><span>Profile / Director identity</span></div>
-          <div class="live-chip"><i></i> Capability-faithful mock</div>
+          <div class="breadcrumb"><a href="index.html">Projection House</a><span>·</span><span>Profile / Director identity</span></div>
+          <div class="live-chip"><i></i> Public profile · Live</div>
         </header>
 
         <section class="profile-hero" aria-label="Director profile hero">
@@ -31,6 +31,11 @@
               <div class="identity-meta"><span>@aaliyahjames</span><span>Chicago, US</span><span>aaliyahjames.film ↗</span><span>Member since 2025</span></div>
             </div>
           </div>
+          <aside class="profile-house-card" aria-label="Creative signature">
+            <header><span><i></i> In the house now</span><small>Signature 04</small></header>
+            <div class="signature-film"><img src="cinema-assets/cover-park-bridge.jpg" alt="The Crossing" /><button data-toast="Profile reel playback started" aria-label="Play profile reel">▶</button><div><p class="eyebrow">Pinned premiere</p><h2>The Crossing</h2><span>48 sec · 420k plays</span></div></div>
+            <dl><div><dt>World</dt><dd>Practical wonder</dd></div><div><dt>Camera</dt><dd>Patient proximity</dd></div><div><dt>Finish</dt><dd>Soft 35mm print</dd></div></dl>
+          </aside>
         </section>
 
         <section class="proof-strip" aria-label="Creator proof">
@@ -45,6 +50,7 @@
           <button class="tab active" type="button" data-tab="overview">Overview</button>
           <button class="tab" type="button" data-tab="films">Filmography</button>
           <button class="tab" type="button" data-tab="analytics">Audience pulse</button>
+          <button class="tab" type="button" data-tab="house">Creative house</button>
         </nav>
 
         <section data-tab-panel="profile" data-tab-id="overview">
@@ -102,6 +108,21 @@
         <section data-tab-panel="profile" data-tab-id="analytics" hidden>
           <div class="section-head"><div><p class="eyebrow">Audience pulse</p><h2>Attention, not vanity.</h2></div><p>Watch completion, returning viewers, remix velocity, supporters and the moments that create conversation.</p></div>
           <div class="profile-grid"><article class="panel"><div class="panel-title"><h3>Audience retention</h3><span class="pill active">Healthy</span></div><div class="chart" style="height:240px"><i style="height:96%"></i><i style="height:92%"></i><i style="height:89%"></i><i style="height:85%"></i><i style="height:82%"></i><i style="height:78%"></i><i style="height:76%"></i><i style="height:73%"></i><i style="height:71%"></i><i style="height:68%"></i><i style="height:66%"></i><i style="height:64%"></i></div></article><article class="panel"><div class="panel-title"><h3>Audience sources</h3></div><div class="achievement-list"><div class="achievement"><b>◇</b><div><strong>Projection House</strong><small>44% of discovery</small></div><span>44%</span></div><div class="achievement"><b>↗</b><div><strong>Shared links</strong><small>31% of discovery</small></div><span>31%</span></div><div class="achievement"><b>◎</b><div><strong>Creator profile</strong><small>25% of discovery</small></div><span>25%</span></div></div></article></div>
+        </section>
+
+        <section data-tab-panel="profile" data-tab-id="house" hidden>
+          <div class="section-head"><div><p class="eyebrow">Creative house</p><h2>The people and patrons behind the work.</h2></div><p>Recurring collaborators, supporter rooms, production goals and the promises attached to each release.</p></div>
+          <div class="profile-grid house-grid">
+            <article class="panel collaborator-panel">
+              <div class="panel-title"><div><p class="eyebrow">Frequent collaborators</p><h3>The circle behind the camera.</h3></div><button class="btn ghost" data-toast="Collaboration history opened">All credits ↗</button></div>
+              <div class="collaborator-list"><div><img src="cinema-assets/avatars/kenji-yamamoto-front.webp" alt="Kenji Yamamoto" /><span><b>Kenji Yamamoto</b><small>Production design · 12 films</small></span><strong>92%</strong></div><div><img src="cinema-assets/avatars/fatima-al-rashid-front.webp" alt="Fatima Al-Rashid" /><span><b>Fatima Al-Rashid</b><small>Documentary voice · 8 films</small></span><strong>88%</strong></div><div><img src="cinema-assets/avatars/chioma-eze-front.webp" alt="Chioma Eze" /><span><b>Chioma Eze</b><small>Performance direction · 6 films</small></span><strong>81%</strong></div></div>
+            </article>
+            <article class="panel supporter-panel">
+              <div class="panel-title"><div><p class="eyebrow violet">Supporter rooms</p><h3>Promises, kept visibly.</h3></div><span class="pill active">412 patrons</span></div>
+              <div class="supporter-goal"><div><span>Season two production fund</span><strong>74%</strong></div><i><b></b></i><small>8,240 of 11,000 credits · 18 days remaining</small></div>
+              <div class="supporter-tiers"><button data-toast="First Light supporter room opened"><b>First Light</b><span>286 patrons · early screenings</span></button><button data-toast="Cutting Room supporter room opened"><b>Cutting Room</b><span>96 patrons · production notes</span></button><button data-toast="House Patron supporter room opened"><b>House Patron</b><span>30 patrons · premiere room</span></button></div>
+            </article>
+          </div>
         </section>
       </div>
     </main>
